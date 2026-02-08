@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform Your Life - Ebook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'DM Sans', sans-serif; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(-2deg); }
+      50% { transform: translateY(-10px) rotate(-2deg); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.5); }
+    }
+    
+    .animate-float { animation: float 4s ease-in-out infinite; }
+    .animate-fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+    .animate-fade-in-delay { animation: fadeInUp 0.8s ease-out 0.2s forwards; opacity: 0; }
+    .animate-fade-in-delay-2 { animation: fadeInUp 0.8s ease-out 0.4s forwards; opacity: 0; }
+    .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #D4AF37 0%, #F4E4BA 50%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .book-shadow {
+      box-shadow: 
+        -20px 20px 60px rgba(0,0,0,0.4),
+        0 0 100px rgba(212, 175, 55, 0.1);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body">
+  <div id="app-wrapper" class="w-full h-full overflow-auto" style="background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);"><!-- Decorative Elements -->
+   <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
+   </div><!-- Main Content -->
+   <div class="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-20"><!-- Hero Section -->
+    <div class="grid md:grid-cols-2 gap-12 items-center min-h-[80%]"><!-- Left: Content -->
+     <div class="text-center md:text-left">
+      <div class="animate-fade-in"><span class="inline-block px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase mb-6" style="background: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.3);"> 📚 Bestseller 2024 </span>
+      </div>
+      <h1 id="headline" class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in" style="color: #F5F5F5;">Master the Art of <span class="gradient-text">Digital Success</span></h1>
+      <p id="subheadline" class="text-lg md:text-xl mb-8 leading-relaxed animate-fade-in-delay" style="color: #9CA3AF;">The complete blueprint to build your online empire from scratch. 200+ pages of actionable strategies used by 6-figure entrepreneurs.</p><!-- Features -->
+      <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-10 animate-fade-in-delay">
+       <div class="flex items-center gap-2 text-sm" style="color: #D4AF37;"><span>✓</span> Instant Download
+       </div>
+       <div class="flex items-center gap-2 text-sm" style="color: #D4AF37;"><span>✓</span> Bonus Templates
+       </div>
+       <div class="flex items-center gap-2 text-sm" style="color: #D4AF37;"><span>✓</span> Lifetime Access
+       </div>
+      </div><!-- CTA Section -->
+      <div class="animate-fade-in-delay-2">
+       <div class="flex items-center gap-4 justify-center md:justify-start mb-4"><span id="original-price" class="text-2xl line-through" style="color: #6B7280;">$97</span> <span id="price" class="text-4xl font-bold" style="color: #D4AF37;">$27</span> <span class="px-3 py-1 rounded-full text-xs font-bold" style="background: #DC2626; color: white;">72% OFF</span>
+       </div><button id="cta-button" class="w-full md:w-auto px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 animate-pulse-glow" style="background: linear-gradient(135deg, #D4AF37 0%, #F4E4BA 50%, #D4AF37 100%); color: #0a0a0f;"> 🚀 Get Your Copy Now </button>
+       <p class="text-sm mt-4" style="color: #6B7280;">🔒 Secure checkout • 30-day money-back guarantee</p>
+      </div>
+     </div><!-- Right: Book Mockup -->
+     <div class="relative flex justify-center items-center">
+      <div class="animate-float"><!-- Book -->
+       <div class="relative book-shadow rounded-lg overflow-hidden" style="width: 280px; height: 380px; background: linear-gradient(145deg, #1a1a2e 0%, #2d2d44 100%); border: 2px solid rgba(212, 175, 55, 0.3);"><!-- Book Cover Design -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+         <div class="w-16 h-1 mb-6 rounded-full" style="background: linear-gradient(90deg, transparent, #D4AF37, transparent);"></div><span class="text-6xl mb-4">📈</span>
+         <h3 class="font-display text-2xl font-bold mb-2" style="color: #F5F5F5;">Digital</h3>
+         <h3 class="font-display text-3xl font-bold gradient-text mb-4">SUCCESS</h3>
+         <p class="text-xs uppercase tracking-widest" style="color: #9CA3AF;">The Complete Guide</p>
+         <div class="w-16 h-1 mt-6 rounded-full" style="background: linear-gradient(90deg, transparent, #D4AF37, transparent);"></div>
+        </div><!-- Spine Effect -->
+        <div class="absolute left-0 top-0 bottom-0 w-4" style="background: linear-gradient(90deg, rgba(0,0,0,0.3), transparent);"></div>
+       </div>
+      </div><!-- Floating Badges -->
+      <div class="absolute -top-4 -right-4 md:right-8 px-4 py-2 rounded-lg shadow-lg animate-fade-in" style="background: #1a1a2e; border: 1px solid rgba(212, 175, 55, 0.3);">
+       <div class="flex items-center gap-2"><span class="text-xl">⭐</span>
+        <div>
+         <p class="text-sm font-bold" style="color: #F5F5F5;">4.9/5</p>
+         <p class="text-xs" style="color: #6B7280;">2,847 reviews</p>
+        </div>
+       </div>
+      </div>
+      <div class="absolute -bottom-4 -left-4 md:left-8 px-4 py-2 rounded-lg shadow-lg animate-fade-in-delay" style="background: #1a1a2e; border: 1px solid rgba(212, 175, 55, 0.3);">
+       <div class="flex items-center gap-2"><span class="text-xl">👥</span>
+        <div>
+         <p class="text-sm font-bold" style="color: #F5F5F5;">12,500+</p>
+         <p class="text-xs" style="color: #6B7280;">Happy readers</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Social Proof -->
+    <div class="mt-16 pt-12" style="border-top: 1px solid rgba(212, 175, 55, 0.1);">
+     <p class="text-center text-sm uppercase tracking-widest mb-8" style="color: #6B7280;">Trusted by professionals from</p>
+     <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50"><span class="text-2xl font-bold" style="color: #6B7280;">Google</span> <span class="text-2xl font-bold" style="color: #6B7280;">Meta</span> <span class="text-2xl font-bold" style="color: #6B7280;">Amazon</span> <span class="text-2xl font-bold" style="color: #6B7280;">Netflix</span> <span class="text-2xl font-bold" style="color: #6B7280;">Spotify</span>
+     </div>
+    </div><!-- Testimonials -->
+    <div class="mt-20 grid md:grid-cols-3 gap-6">
+     <div class="p-6 rounded-2xl" style="background: rgba(26, 26, 46, 0.8); border: 1px solid rgba(212, 175, 55, 0.1);">
+      <div class="flex gap-1 mb-4"><span style="color: #D4AF37;">★★★★★</span>
+      </div>
+      <p class="mb-4" style="color: #9CA3AF;">"This ebook changed my perspective on online business. Made my first $10K within 3 months of applying these strategies."</p>
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E4BA);"><span class="text-sm">👨</span>
+       </div>
+       <div>
+        <p class="font-semibold text-sm" style="color: #F5F5F5;">Michael R.</p>
+        <p class="text-xs" style="color: #6B7280;">Entrepreneur, USA</p>
+       </div>
+      </div>
+     </div>
+     <div class="p-6 rounded-2xl" style="background: rgba(26, 26, 46, 0.8); border: 1px solid rgba(212, 175, 55, 0.1);">
+      <div class="flex gap-1 mb-4"><span style="color: #D4AF37;">★★★★★</span>
+      </div>
+      <p class="mb-4" style="color: #9CA3AF;">"Finally, a guide that delivers real value. The bonus templates alone are worth 10x the price. Highly recommend!"</p>
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E4BA);"><span class="text-sm">👩</span>
+       </div>
+       <div>
+        <p class="font-semibold text-sm" style="color: #F5F5F5;">Sarah K.</p>
+        <p class="text-xs" style="color: #6B7280;">Marketing Director, UK</p>
+       </div>
+      </div>
+     </div>
+     <div class="p-6 rounded-2xl" style="background: rgba(26, 26, 46, 0.8); border: 1px solid rgba(212, 175, 55, 0.1);">
+      <div class="flex gap-1 mb-4"><span style="color: #D4AF37;">★★★★★</span>
+      </div>
+      <p class="mb-4" style="color: #9CA3AF;">"I've read dozens of business ebooks. This one stands out because it's actionable from page one. Pure gold!"</p>
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E4BA);"><span class="text-sm">👨</span>
+       </div>
+       <div>
+        <p class="font-semibold text-sm" style="color: #F5F5F5;">David L.</p>
+        <p class="text-xs" style="color: #6B7280;">Freelancer, Canada</p>
+       </div>
+      </div>
+     </div>
+    </div><!-- Footer CTA -->
+    <div class="mt-20 text-center py-12 px-8 rounded-3xl" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%); border: 1px solid rgba(212, 175, 55, 0.2);">
+     <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="color: #F5F5F5;">Ready to Transform Your Future?</h2>
+     <p class="text-lg mb-8" style="color: #9CA3AF;">Join 12,500+ successful readers. Limited time offer ends soon.</p><button class="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, #D4AF37 0%, #F4E4BA 50%, #D4AF37 100%); color: #0a0a0f;"> 🎁 Claim Your 72% Discount </button>
+    </div><!-- Footer -->
+    <div class="mt-16 text-center">
+     <p class="text-sm" style="color: #6B7280;">© 2024 Digital Success. All rights reserved.</p>
+    </div>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      headline: 'Master the Art of <span class="gradient-text">Digital Success</span>',
+      subheadline: 'The complete blueprint to build your online empire from scratch. 200+ pages of actionable strategies used by 6-figure entrepreneurs.',
+      cta_button: '🚀 Get Your Copy Now',
+      price: '$27',
+      original_price: '$97',
+      background_color: '#0a0a0f',
+      surface_color: '#1a1a2e',
+      text_color: '#F5F5F5',
+      accent_color: '#D4AF37',
+      muted_color: '#9CA3AF',
+      font_family: 'DM Sans',
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+
+    async function onConfigChange(cfg) {
+      config = { ...defaultConfig, ...cfg };
+      
+      const headline = document.getElementById('headline');
+      const subheadline = document.getElementById('subheadline');
+      const ctaButton = document.getElementById('cta-button');
+      const price = document.getElementById('price');
+      const originalPrice = document.getElementById('original-price');
+      
+      if (headline) headline.innerHTML = config.headline || defaultConfig.headline;
+      if (subheadline) subheadline.textContent = config.subheadline || defaultConfig.subheadline;
+      if (ctaButton) ctaButton.textContent = config.cta_button || defaultConfig.cta_button;
+      if (price) price.textContent = config.price || defaultConfig.price;
+      if (originalPrice) originalPrice.textContent = config.original_price || defaultConfig.original_price;
+      
+      // Apply font
+      const customFont = config.font_family || defaultConfig.font_family;
+      document.body.style.fontFamily = `${customFont}, sans-serif`;
+      
+      // Apply font size scaling
+      const baseSize = config.font_size || defaultConfig.font_size;
+      document.documentElement.style.fontSize = `${baseSize}px`;
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [
+          {
+            get: () => cfg.background_color || defaultConfig.background_color,
+            set: (value) => { cfg.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+          },
+          {
+            get: () => cfg.surface_color || defaultConfig.surface_color,
+            set: (value) => { cfg.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+          },
+          {
+            get: () => cfg.text_color || defaultConfig.text_color,
+            set: (value) => { cfg.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+          },
+          {
+            get: () => cfg.accent_color || defaultConfig.accent_color,
+            set: (value) => { cfg.accent_color = value; window.elementSdk.setConfig({ accent_color: value }); }
+          },
+          {
+            get: () => cfg.muted_color || defaultConfig.muted_color,
+            set: (value) => { cfg.muted_color = value; window.elementSdk.setConfig({ muted_color: value }); }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => cfg.font_family || defaultConfig.font_family,
+          set: (value) => { cfg.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
+        },
+        fontSizeable: {
+          get: () => cfg.font_size || defaultConfig.font_size,
+          set: (value) => { cfg.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ['headline', cfg.headline || defaultConfig.headline],
+        ['subheadline', cfg.subheadline || defaultConfig.subheadline],
+        ['cta_button', cfg.cta_button || defaultConfig.cta_button],
+        ['price', cfg.price || defaultConfig.price],
+        ['original_price', cfg.original_price || defaultConfig.original_price]
+      ]);
+    }
+
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Button interactions
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        btn.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          btn.style.transform = 'scale(1)';
+        }, 150);
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ca87b8a47fdf1ce',t:'MTc3MDUyNTk3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
