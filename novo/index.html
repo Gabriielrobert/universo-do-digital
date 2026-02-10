@@ -14,11 +14,34 @@
 
 body{
   background:#000;
+  font-family: Arial, sans-serif;
 }
 
-img{
+.section{
+  position:relative; /* necessário para posicionar o botão */
   width:100%;
-  height:auto; /* mantém proporção natural */
+}
+
+.section img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Botão imagem */
+.btn-img{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:45%; /* controla altura do botão */
+  width:100%; /* tamanho do botão */
+  max-width:1000px;
+  cursor:pointer;
+}
+
+.btn-img img{
+  width:100%;
+  height:auto;
   display:block;
 }
 </style>
@@ -26,7 +49,17 @@ img{
 
 <body>
 
-<img src="https://i.ibb.co/395s8Nv6/P-gina.png" alt="">
+<section class="section">
+  <img src="https://i.ibb.co/395s8Nv6/P-gina.png" alt="">
+  
+  <a href="#comprar" class="btn-img">
+    <img src="https://i.ibb.co/fYRFbN1C/quinta-09-07-20-botao-telegram2.png" alt="Comprar">
+  </a>
+</section>
+
+<section class="section">
+  <img src="imagem2.jpg" alt="">
+</section>
 
 </body>
 </html>
